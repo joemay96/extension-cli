@@ -1,0 +1,30 @@
+{
+  "name": "extension-cli",
+  "version": "0.0.1",
+  "description": "A Firefox and Chrome Extension Tool to boilerplate a manifest.json and other files",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joemay96/extension-cli.git"
+  },
+  "keywords": [
+    "extension",
+    "chrome",
+    "firefox",
+    "boilerplate"
+  ],
+  "author": "joemay969",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joemay96/extension-cli/issues"
+  },
+  "homepage": "https://github.com/joemay96/extension-cli#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0",
+    "listr": "^0.14.3",
+    "ora": "^6.0.1"
+  }
+}
