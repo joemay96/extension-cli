@@ -9,8 +9,10 @@ function createDirectory(folderName){
         if(!fs.existsSync(folderName)){
             fs.mkdirSync(folderName)
         }
+        return 0;
     } catch(err) {
         console.log(err)
+        return 1;
     }
 }
 

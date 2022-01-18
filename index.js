@@ -51,7 +51,7 @@ inquirer
     {
         type: "checkbox",
         name: "options",
-        message: "Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection)",
+        message: "Check the features needed for your project: ",
         choices: [
             "UI",
             "Options Page",
