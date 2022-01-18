@@ -30,6 +30,18 @@ inquirer
         default: 3
     },
     {
+        type: "input",
+        name: "author",
+        message: "Author: ",
+        default: ""
+    },
+    {
+        type: "input",
+        name: "locale",
+        message: "Default locale: ",
+        default: "en"
+    },
+    {
         type: "checkbox",
         name: "options",
         message: "Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection)",
