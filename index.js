@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const listr = require('listr');
 // const ora = require('ora')
+const {createManifest} = require("./utils/createManifest");
 
 inquirer
   .prompt([
@@ -42,9 +43,15 @@ inquirer
         default: "en"
     },
     {
+        type: "input",
+        name: "license",
+        message: "License: ",
+        default: "MIT"
+    },
+    {
         type: "checkbox",
         name: "options",
-        message: "Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection)",
+        message: "Check the features needed for your project: ",
         choices: [
             "UI",
             "Options Page",
@@ -55,8 +62,9 @@ inquirer
     }
   ])
   .then((answers) => {
-    console.log(answers)
-  })
+    const status = createManifest(answers.name, answers.version, answers.description, answers.manifestVersion, answers.author, answers.locale, answers.license);
+    console.log(status)
+})
   .catch((error) => {
     if (error.isTtyError) {
       // Prompt couldn't be rendered in the current environment
