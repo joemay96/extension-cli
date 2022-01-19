@@ -1,5 +1,5 @@
 const fs = require("fs")
-const {createDirectory} = require("./createStructures");
+const {createDirectory, copyAssets} = require("./createStructures");
 
 function createManifest(name,version,description, manifestVersion, author, locale, license){
     // creating a simple manifest file
@@ -59,6 +59,10 @@ function createManifestFile(name, version, description, manifestVersion, author,
     } catch (err) {
         console.error(err)
     }
+
+    //* 3. Copy assets
+    const asset_status = copyAssets(name);
+    console.log(asset_status)
 }
 
 module.exports = {
